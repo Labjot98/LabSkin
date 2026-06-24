@@ -341,24 +341,18 @@ body {
   .hero-secondary-btn {
     width: 100%;
   }
-}
-
-/* =========================
-   INDUSTRY INTRO / TILES
+} /* =========================
+   INDUSTRIES SECTION
 ========================= */
 
 .industry-section {
-  padding: 60px 40px;
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 70px 40px;
+  background: #ffffff;
 }
 
 .industry-intro {
-  max-width: 950px;
-  margin: 0 auto 58px;
+  max-width: 900px;
+  margin: 0 auto 52px;
   text-align: center;
 }
 
@@ -371,219 +365,110 @@ body {
 }
 
 .industry-intro p {
-  margin: 24px auto 0;
-  max-width: 880px;
+  margin-top: 24px;
   color: var(--text);
-  font-size: 20px;
-  line-height: 1.7;
-  letter-spacing: -0.02em;
+  font-size: 19px;
+  line-height: 1.8;
 }
 
-/* Cards layout: 3 top, 2 bottom */
-.industry-tiles {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 28px;
+.industry-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
 }
 
-.industry-tile:nth-child(1),
-.industry-tile:nth-child(2),
-.industry-tile:nth-child(3) {
-  grid-column: span 2;
-}
-
-.industry-tile:nth-child(4),
-.industry-tile:nth-child(5) {
-  grid-column: span 3;
-}
-
-.industry-tile {
+.industry-card {
   position: relative;
-  min-height: 320px;
-  padding: 42px;
-  border-radius: 18px;
+  width: 230px;
+  height: 360px;
+  flex-shrink: 0;
+
+  border-radius: 26px;
   overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-
-  color: #ffffff;
+  background-position: center;
   text-decoration: none;
 
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
+  transition: all 0.35s ease;
 }
 
-.industry-tile::before {
-  content: "";
+.industry-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 75px rgba(15, 23, 42, 0.2);
+}
+
+.industry-card.cosmetics {
+  background-image: url("https://images.pexels.com/photos/7670737/pexels-photo-7670737.jpeg");
+}
+
+.industry-card.pharmaceutical {
+  background-image: url("https://images.pexels.com/photos/5995061/pexels-photo-5995061.jpeg");
+}
+
+.industry-card.biotech {
+  background-image: url("https://images.pexels.com/photos/4031435/pexels-photo-4031435.jpeg");
+}
+
+.industry-card.academia {
+  background-image: url("https://images.pexels.com/photos/8531342/pexels-photo-8531342.jpeg");
+}
+
+.industry-card.wound {
+  background-image: url("https://images.pexels.com/photos/4005313/pexels-photo-4005313.jpeg");
+}
+
+.industry-overlay {
   position: absolute;
   inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 24px;
 
   background: linear-gradient(
-    180deg,
-    rgba(15, 23, 42, 0.12) 0%,
-    rgba(15, 23, 42, 0.38) 42%,
-    rgba(15, 23, 42, 0.82) 100%
+    to top,
+    rgba(15, 23, 42, 0.94),
+    rgba(15, 23, 42, 0.45),
+    rgba(15, 23, 42, 0.02)
   );
-
-  z-index: 1;
-  transition: 0.35s ease;
-}
-
-.industry-tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: rgba(10, 91, 215, 0.18);
-
-  opacity: 0;
-  z-index: 1;
-
-  transition: 0.35s ease;
-}
-
-.industry-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 430px;
-
-  transition:
-    transform 0.35s ease,
-    scale 0.35s ease;
 }
 
 .industry-content h3 {
   color: #ffffff;
-  font-size: 28px;
-  line-height: 1.12;
-  letter-spacing: -0.05em;
+  font-size: 23px;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   font-weight: 800;
-  margin-bottom: 14px;
-
-  transition: 0.35s ease;
+  margin-bottom: 10px;
 }
 
-.industry-arrow {
-  position: absolute;
-  right: 34px;
-  bottom: 34px;
-  z-index: 3;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--primary);
-
-  font-size: 24px;
-  font-weight: 800;
-
-  transition: 0.35s ease;
-}
-
-/* Background images */
-.industry-tile.cosmetics {
-  background-image: url("https://images.pexels.com/photos/7670737/pexels-photo-7670737.jpeg");
-}
-
-.industry-tile.pharmaceutical {
-  background-image: url("https://images.pexels.com/photos/5995061/pexels-photo-5995061.jpeg");
-}
-
-.industry-tile.biotech {
-  background-image: url("https://images.pexels.com/photos/4031435/pexels-photo-4031435.jpeg");
-}
-
-.industry-tile.academia {
-  background-image: url("https://images.pexels.com/photos/8531342/pexels-photo-8531342.jpeg");
-}
-
-.industry-tile.wound {
-  background-image: url("https://images.pexels.com/photos/4005313/pexels-photo-4005313.jpeg");
-}
-
-/* Hover effect */
-.industry-tile:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 34px 90px rgba(15, 23, 42, 0.18);
-}
-
-.industry-tile:hover .industry-content {
-  transform: translateY(-10px) scale(1.04);
-}
-
-.industry-tile:hover .industry-content h3 {
-  font-size: 31px;
-}
-
-.industry-tile:hover .industry-arrow {
-  transform: translateX(6px);
-  background: var(--primary);
-  color: #ffffff;
-}
-
-/* =========================
-   RESPONSIVE INDUSTRIES
-========================= */
-
-@media (max-width: 1100px) {
-  .industry-tiles {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .industry-tile {
-    grid-column: span 1 !important;
-  }
+.industry-content p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .industry-section {
-    padding: 70px 22px;
+    padding: 60px 20px;
   }
 
   .industry-intro {
-    margin-bottom: 40px;
-  }
-
-  .industry-intro h2 {
-    font-size: clamp(36px, 10vw, 48px);
+    margin-bottom: 38px;
   }
 
   .industry-intro p {
     font-size: 16px;
   }
 
-  .industry-tiles {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .industry-tile {
-    min-height: 280px;
-    padding: 30px;
-  }
-
-  .industry-content h3 {
-    font-size: 25px;
-  }
-
-  .industry-content p {
-    font-size: 15px;
+  .industry-card {
+    width: 100%;
+    max-width: 340px;
+    height: 360px;
   }
 }
 /* =========================
@@ -630,27 +515,32 @@ body {
   line-height: 1.7;
 }
 
-/* Grid */
-
 .models-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 28px;
 }
 
-/* First Row */
-
+/* First row */
 .model-card:nth-child(1),
 .model-card:nth-child(2),
 .model-card:nth-child(3) {
   grid-column: span 2;
 }
 
-/* Second Row */
-
+/* Second row - same width as top row */
 .model-card:nth-child(4),
 .model-card:nth-child(5) {
-  grid-column: span 3;
+  grid-column: span 2;
+}
+
+/* Center the second row */
+.model-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.model-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 /* Cards */
@@ -1102,5 +992,87 @@ body {
 
   .news-content {
     padding: 24px;
+  }
+}
+
+/* =========================
+   GET IN TOUCH BANNER
+========================= */
+
+.contact-banner-section {
+  position: relative;
+  min-height: 280px;
+  padding: 65px 40px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+    linear-gradient(rgba(5, 32, 78, 0.62), rgba(5, 32, 78, 0.72)),
+    url("../assets/PIONEERING-1.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  text-align: center;
+}
+
+.contact-banner-content h2 {
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 56px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+}
+
+.contact-banner-content p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 19px;
+  line-height: 1.55;
+  margin-bottom: 34px;
+}
+
+.contact-banner-btn {
+  border: none;
+  cursor: pointer;
+
+  background: #ffffff;
+  color: #075c91;
+
+  padding: 17px 42px;
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.contact-banner-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 768px) {
+  .contact-banner-section {
+    min-height: 320px;
+    padding: 70px 22px;
+    background-position: center;
+  }
+
+  .contact-banner-content p {
+    font-size: 16px;
   }
 }

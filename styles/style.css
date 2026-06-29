@@ -996,6 +996,213 @@ body {
 }
 
 /* =========================
+   CLIENT FEEDBACK SECTION
+========================= */
+
+.client-feedback-section {
+  padding: 60px 40px;
+  background: #ffffff;
+}
+
+.client-feedback-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.client-feedback-heading {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.client-feedback-heading h2 {
+  color: var(--dark);
+  font-size: clamp(2.6rem, 4.5vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin-bottom: 18px;
+}
+
+.client-feedback-heading p {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.client-feedback-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.7fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.featured-feedback {
+  position: relative;
+  min-height: 610px;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+}
+
+.featured-feedback img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-feedback::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.86),
+    rgba(15, 23, 42, 0.3),
+    rgba(15, 23, 42, 0.05)
+  );
+}
+
+.featured-feedback-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  padding: 34px;
+}
+
+.featured-feedback-overlay p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  margin-bottom: 34px;
+}
+
+.featured-feedback-author h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.featured-feedback-author span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+}
+
+.feedback-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.feedback-card {
+  min-height: 290px;
+  padding: 34px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.35s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+}
+
+.feedback-card p {
+  color: var(--dark);
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  font-weight: 650;
+}
+
+.feedback-author {
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.feedback-author h4 {
+  color: var(--dark);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.feedback-author span {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.client-feedback-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.client-feedback-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary);
+  color: #ffffff;
+  padding: 17px 30px;
+  border-radius: 999px;
+
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow: 0 18px 45px rgba(10, 91, 215, 0.28);
+  transition: 0.3s ease;
+}
+
+.client-feedback-btn:hover {
+  transform: translateY(-4px);
+  background: #084bb3;
+  box-shadow: 0 24px 60px rgba(10, 91, 215, 0.36);
+}
+
+@media (max-width: 1100px) {
+  .client-feedback-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-feedback {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 760px) {
+  .client-feedback-section {
+    padding: 70px 20px;
+  }
+
+  .feedback-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-feedback {
+    min-height: 500px;
+  }
+
+  .featured-feedback-overlay,
+  .feedback-card {
+    padding: 28px;
+  }
+
+  .featured-feedback-overlay p,
+  .feedback-card p {
+    font-size: 1.18rem;
+  }
+}
+
+/* =========================
    GET IN TOUCH BANNER
 ========================= */
 

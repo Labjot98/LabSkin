@@ -1329,18 +1329,36 @@ body {
 }
 
 .footer-column a {
+  position: relative;
   display: block;
+  width: fit-content;
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
   font-size: 0.95rem;
   margin-bottom: 18px;
-  transition: 0.25s ease;
+  transition: 0.3s ease;
 }
 
+.footer-column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #ffffff;
+
+  transition: width 0.3s ease;
+}
 .footer-column a:hover {
-  color: #8fc2ff;
-  transform: translateX(5px);
+  color: #ffffff;
+}
+
+.footer-column a:hover::after {
+  width: 100%;
 }
 
 .footer-brand {
@@ -1410,10 +1428,6 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
-}
-
-.footer-bottom-links a:hover {
-  color: #8fc2ff;
 }
 
 @media (max-width: 1100px) {

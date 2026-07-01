@@ -125,6 +125,72 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 16px 35px rgba(10, 91, 215, 0.3);
 }
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+
+  min-width: 240px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.12),
+    0 6px 20px rgba(15, 23, 42, 0.06);
+
+  padding: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+
+  padding: 13px 16px;
+
+  border-radius: 12px;
+
+  color: var(--dark);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.dropdown-menu a:hover {
+  color: var(--primary);
+  padding-left: 22px;
+}
 /* =========================
    HERO SECTION
 ========================= */
@@ -1290,7 +1356,8 @@ body {
 .site-footer {
   margin-top: 60px;
   width: 100%;
-  background: linear-gradient(135deg, #0a5bd7 0%, #083d99 100%);
+  /* background: linear-gradient(135deg, #0a5bd7 0%, #083d99 100%); */
+  background: var(--dark);
 }
 
 .footer-container {
@@ -1320,7 +1387,9 @@ body {
 }
 
 .footer-column h4 {
-  color: var(--dark);
+  /* color: var(--dark); */
+  color: #ffffff;
+  text-decoration: underline;
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1397,8 +1466,6 @@ body {
 }
 
 .footer-socials a:hover {
-  background: #ffffff;
-  color: #062f75;
   transform: translateY(-4px);
 }
 
@@ -1427,6 +1494,7 @@ body {
 .footer-bottom-links a {
   color: #ffffff;
   text-decoration: none;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 

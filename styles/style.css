@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary: #0a5bd7;
+  --primary: #062c4d;
   --dark: #0f172a;
   --text: #334155;
   --border: rgba(15, 23, 42, 0.08);
@@ -111,7 +111,8 @@ body {
   padding: 14px 24px;
   border-radius: 999px;
 
-  background: linear-gradient(135deg, #0a5bd7, #0047b3);
+  /* background: linear-gradient(135deg, #0a5bd7, #0047b3); */
+  background-color: #062c4d;
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
@@ -251,7 +252,7 @@ body {
 
 .hero h1 span {
   display: block;
-  color: #68aaff;
+  color: #0bb4aa;
 }
 
 .hero p {
@@ -668,7 +669,7 @@ body {
 .model-link {
   margin-top: 32px;
 
-  color: var(--primary);
+  color: #0bb4aa;
 
   font-size: 15px;
   font-weight: 700;
@@ -738,7 +739,8 @@ body {
   border-radius: 32px;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #0a5bd7 0%, #083d99 100%);
+  /* background: linear-gradient(135deg, #0a5bd7 0%, #083d99 100%); */
+  background-color: #062c4d;
 
   box-shadow: 0 35px 90px rgba(15, 23, 42, 0.15);
 }
@@ -1357,7 +1359,7 @@ body {
   margin-top: 60px;
   width: 100%;
   /* background: linear-gradient(135deg, #0a5bd7 0%, #083d99 100%); */
-  background: var(--dark);
+  background: var(--primary);
 }
 
 .footer-container {

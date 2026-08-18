@@ -21,7 +21,6 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -35,29 +34,30 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Shared Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
-
-    <!-- Model Page Styles -->
     <link rel="stylesheet" href="../styles/model.css" />
-
-    <!-- Footer Styles -->
     <link rel="stylesheet" href="../styles/footer.css" />
   </head>
 
   <body>
+    <!-- =========================================
+         HEADER / NAVBAR
+    ========================================== -->
+
     <header class="header">
-      <!-- Navbar -->
       <nav class="navbar">
         <a href="../index.html" class="logo">
           <img src="../assets/labskin-white.png" alt="Labskin" />
         </a>
 
         <ul class="nav-menu">
+          <!-- Services -->
           <li class="dropdown">
             <a href="#">
               Services
+
               <svg class="dropdown-icon" viewBox="0 0 24 24">
                 <path d="M6 9L12 15L18 9" />
               </svg>
@@ -73,9 +73,11 @@
             </div>
           </li>
 
+          <!-- Models -->
           <li class="dropdown">
             <a href="#">
               Models
+
               <svg class="dropdown-icon" viewBox="0 0 24 24">
                 <path d="M6 9L12 15L18 9" />
               </svg>
@@ -90,16 +92,18 @@
             </div>
           </li>
 
+          <!-- Industries -->
           <li class="dropdown">
             <a href="#">
               Industries
+
               <svg class="dropdown-icon" viewBox="0 0 24 24">
                 <path d="M6 9L12 15L18 9" />
               </svg>
             </a>
 
             <div class="dropdown-menu">
-              <a href="#">Cosmetics & Skincare</a>
+              <a href="#">Cosmetics &amp; Skincare</a>
               <a href="#">Pharmaceutical</a>
               <a href="#">Biotech</a>
               <a href="#">Academia</a>
@@ -107,9 +111,11 @@
             </div>
           </li>
 
+          <!-- Resources -->
           <li class="dropdown">
             <a href="#">
               Resources
+
               <svg class="dropdown-icon" viewBox="0 0 24 24">
                 <path d="M6 9L12 15L18 9" />
               </svg>
@@ -124,23 +130,31 @@
             </div>
           </li>
 
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
         </ul>
 
-        <a href="#" class="cta-btn"> Discuss Your Project </a>
+        <a href="#" class="cta-btn">Discuss Your Project</a>
       </nav>
     </header>
 
     <main>
-      <!-- Model Hero -->
+      <!-- =========================================
+           MODEL HERO
+      ========================================== -->
+
       <section class="model-hero" id="labskin-s">
         <div class="model-hero-overlay"></div>
 
         <div class="model-hero-content">
-          <span class="model-hero-label"
-            >Healthy Full-Thickness Skin Model</span
-          >
+          <span class="model-hero-label">
+            Healthy Full-Thickness Skin Model
+          </span>
 
           <h1>
             Labskin-S
@@ -165,8 +179,11 @@
         </div>
       </section>
 
-      <!-- Overview -->
-      <section class="model-overview-section">
+      <!-- =========================================
+           OVERVIEW
+      ========================================== -->
+
+      <section class="model-overview-section" id="overview">
         <div class="model-page-container model-overview-grid">
           <div class="model-section-heading">
             <span class="model-section-label">Overview</span>
@@ -200,10 +217,13 @@
         </div>
       </section>
 
-      <!-- Key Features -->
+      <!-- =========================================
+           KEY FEATURES
+      ========================================== -->
+
       <section class="model-features-section" id="features">
         <div class="model-page-container model-features-layout">
-          <!-- Left Image Panel -->
+          <!-- Image Panel -->
           <div class="model-features-image">
             <img
               src="../assets/750_9546-scaled.jpg"
@@ -226,7 +246,7 @@
             </div>
           </div>
 
-          <!-- Right Feature List -->
+          <!-- Feature List -->
           <div class="model-features-list">
             <article class="model-feature-row">
               <span class="feature-number">01</span>
@@ -301,14 +321,16 @@
         </div>
       </section>
 
-      <!-- Applications -->
+      <!-- =========================================
+           APPLICATIONS
+      ========================================== -->
+
       <section class="model-applications-section" id="applications">
         <div class="model-page-container">
-          <!-- Section Heading -->
           <div class="model-applications-heading">
             <span class="model-section-label">Applications</span>
 
-            <h2>One Model. Multiple Research Pathways.</h2>
+            <h2>One Model. Multiple Research Pathways</h2>
 
             <p>
               Labskin-S supports cosmetic, pharmaceutical and skin biology
@@ -316,7 +338,6 @@
             </p>
           </div>
 
-          <!-- Application Cards -->
           <div class="application-cards">
             <!-- Cosmetic & Personal Care -->
             <article
@@ -326,6 +347,7 @@
               "
             >
               <div class="application-card-background" aria-hidden="true"></div>
+
               <div class="application-card-overlay" aria-hidden="true"></div>
 
               <div class="application-card-inner">
@@ -349,7 +371,7 @@
               </div>
             </article>
 
-            <!-- Pharmaceutical Research -->
+            <!-- Pharmaceutical -->
             <article
               class="application-card"
               style="
@@ -357,6 +379,7 @@
               "
             >
               <div class="application-card-background" aria-hidden="true"></div>
+
               <div class="application-card-overlay" aria-hidden="true"></div>
 
               <div class="application-card-inner">
@@ -379,7 +402,7 @@
               </div>
             </article>
 
-            <!-- Skin Biology Research -->
+            <!-- Skin Biology -->
             <article
               class="application-card"
               style="
@@ -387,6 +410,7 @@
               "
             >
               <div class="application-card-background" aria-hidden="true"></div>
+
               <div class="application-card-overlay" aria-hidden="true"></div>
 
               <div class="application-card-inner">
@@ -412,7 +436,10 @@
         </div>
       </section>
 
-      <!-- Scientific Comparison -->
+      <!-- =========================================
+           SCIENTIFIC COMPARISON
+      ========================================== -->
+
       <section class="model-science-section">
         <div class="model-page-container">
           <div class="model-science-heading">
@@ -422,7 +449,7 @@
 
             <h2>
               Labskin-S compared with
-              <span>human skin.</span>
+              <span>human skin</span>
             </h2>
 
             <p>
@@ -441,11 +468,14 @@
         </div>
       </section>
 
-      <!-- Plate Supply -->
+      <!-- =========================================
+           PLATE SUPPLY
+      ========================================== -->
+
       <section class="model-plates-section">
         <div class="model-page-container">
           <div class="model-plates-card">
-            <!-- Left Image Panel -->
+            <!-- Left Panel -->
             <div
               class="model-plates-content"
               style="--plates-image: url(../assets/750_7269-scaled.jpg)"
@@ -485,7 +515,7 @@
               </div>
             </div>
 
-            <!-- Right Information Panel -->
+            <!-- Right Panel -->
             <div class="model-plates-information">
               <article>
                 <span>01</span>
@@ -531,17 +561,22 @@
         </div>
       </section>
 
-      <!-- Resources & Applications -->
+      <!-- =========================================
+           RESOURCES & APPLICATIONS
+      ========================================== -->
+
       <section class="model-resources-section" id="resources">
         <div class="model-page-container">
           <!-- Heading -->
           <div class="resources-heading">
-            <span class="model-section-label">Resources & Applications</span>
+            <span class="model-section-label"
+              >Resources &amp; Applications</span
+            >
 
             <div class="resources-heading-grid">
               <h2>
                 Explore the science
-                <span>behind Labskin-S.</span>
+                <span>behind Labskin-S</span>
               </h2>
 
               <p>
@@ -556,16 +591,25 @@
           <div class="resources-tabs" role="tablist">
             <button
               class="resource-tab active"
+              id="tab-applications"
               data-resource-tab="applications"
               type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-applications"
             >
               Key Applications
               <span>08</span>
             </button>
+
             <button
               class="resource-tab"
+              id="tab-publications"
               data-resource-tab="publications"
               type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-publications"
             >
               Publications
               <span>04</span>
@@ -573,8 +617,12 @@
 
             <button
               class="resource-tab"
+              id="tab-whitepapers"
               data-resource-tab="whitepapers"
               type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-whitepapers"
             >
               White Papers
               <span>04</span>
@@ -582,16 +630,29 @@
 
             <button
               class="resource-tab"
+              id="tab-application-notes"
               data-resource-tab="application-notes"
               type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-application-notes"
             >
               Application Notes
               <span>08</span>
             </button>
           </div>
 
-          <!-- Key Applications -->
-          <div class="resource-panel active" data-resource-panel="applications">
+          <!-- =====================================
+               KEY APPLICATIONS
+          ====================================== -->
+
+          <div
+            class="resource-panel active"
+            id="panel-applications"
+            data-resource-panel="applications"
+            role="tabpanel"
+            aria-labelledby="tab-applications"
+          >
             <div class="resource-strip-list">
               <article class="resource-strip resource-strip-static">
                 <span class="resource-strip-number">01</span>
@@ -659,8 +720,18 @@
             </div>
           </div>
 
-          <!-- Publications -->
-          <div class="resource-panel" data-resource-panel="publications">
+          <!-- =====================================
+               PUBLICATIONS
+          ====================================== -->
+
+          <div
+            class="resource-panel"
+            id="panel-publications"
+            data-resource-panel="publications"
+            role="tabpanel"
+            aria-labelledby="tab-publications"
+            hidden
+          >
             <div class="resource-strip-list">
               <a href="#" class="resource-strip">
                 <span class="resource-strip-number">01</span>
@@ -734,8 +805,18 @@
             </div>
           </div>
 
-          <!-- White Papers -->
-          <div class="resource-panel" data-resource-panel="whitepapers">
+          <!-- =====================================
+               WHITE PAPERS
+          ====================================== -->
+
+          <div
+            class="resource-panel"
+            id="panel-whitepapers"
+            data-resource-panel="whitepapers"
+            role="tabpanel"
+            aria-labelledby="tab-whitepapers"
+            hidden
+          >
             <div class="resource-strip-list">
               <a href="#" class="resource-strip">
                 <span class="resource-strip-number">01</span>
@@ -805,8 +886,18 @@
             </div>
           </div>
 
-          <!-- Application Notes -->
-          <div class="resource-panel" data-resource-panel="application-notes">
+          <!-- =====================================
+               APPLICATION NOTES
+          ====================================== -->
+
+          <div
+            class="resource-panel"
+            id="panel-application-notes"
+            data-resource-panel="application-notes"
+            role="tabpanel"
+            aria-labelledby="tab-application-notes"
+            hidden
+          >
             <div class="resource-strip-list">
               <a href="#" class="resource-strip">
                 <span class="resource-strip-number">01</span>
@@ -932,7 +1023,10 @@
         </div>
       </section>
 
-      <!-- Labskin-S Final CTA -->
+      <!-- =========================================
+           FINAL CTA
+      ========================================== -->
+
       <section class="model-contact-banner" id="contact">
         <div class="model-contact-banner-content">
           <h2>Ready to Discuss Your Study?</h2>
@@ -949,12 +1043,18 @@
       </section>
     </main>
 
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-main">
           <div class="footer-links">
+            <!-- Services -->
             <div class="footer-column">
               <h4>Services</h4>
+
               <a href="#">Research Projects</a>
               <a href="#">Microbiome Testing</a>
               <a href="#">Microbiology</a>
@@ -963,17 +1063,21 @@
               <a href="#">Consultation</a>
             </div>
 
+            <!-- Models -->
             <div class="footer-column">
               <h4>Models</h4>
-              <a href="#">Labskin-S</a>
+
+              <a href="./labskin-s.html">Labskin-S</a>
               <a href="#">Labskin-AD</a>
               <a href="#">Labskin-M</a>
               <a href="#">Labskin-Mel</a>
               <a href="#">Labskin-Wound Healing</a>
             </div>
 
+            <!-- Company -->
             <div class="footer-column">
               <h4>Company</h4>
+
               <a href="#">About Us</a>
               <a href="#">Our Science</a>
               <a href="#">Latest News</a>
@@ -981,8 +1085,10 @@
               <a href="#">Contact Us</a>
             </div>
 
+            <!-- Resources -->
             <div class="footer-column">
               <h4>Resources</h4>
+
               <a href="#">Publications</a>
               <a href="#">Case Studies</a>
               <a href="#">Posters</a>
@@ -990,6 +1096,7 @@
             </div>
           </div>
 
+          <!-- Brand -->
           <div class="footer-brand">
             <img src="../assets/LOGO-transparent-web.png" alt="Labskin" />
 
@@ -998,29 +1105,37 @@
                 href="https://www.instagram.com/labskin_limited?igsh=MTFjNnJsdXpmc25wdQ%3D%3D"
                 aria-label="Instagram"
                 target="_blank"
-                ><i
+                rel="noopener noreferrer"
+              >
+                <i
                   class="fa-brands fa-instagram fa-xl"
                   style="color: #ffffff"
-                ></i
-              ></a>
+                ></i>
+              </a>
+
               <a
                 href="https://youtube.com/@labskin-skin-science?si=4JqMJzc9KCsuKOYA"
                 aria-label="YouTube"
                 target="_blank"
-                ><i
+                rel="noopener noreferrer"
+              >
+                <i
                   class="fa-brands fa-youtube fa-xl"
                   style="color: #ffffff"
-                ></i
-              ></a>
+                ></i>
+              </a>
+
               <a
                 href="https://www.linkedin.com/company/labskin-ltd/posts/?feedView=all"
                 aria-label="LinkedIn"
                 target="_blank"
-                ><i
+                rel="noopener noreferrer"
+              >
+                <i
                   class="fa-brands fa-linkedin fa-xl"
                   style="color: #ffffff"
-                ></i
-              ></a>
+                ></i>
+              </a>
             </div>
           </div>
         </div>
@@ -1035,6 +1150,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- =========================================
+         RESOURCE TABS
+    ========================================== -->
+
     <script>
       const resourceTabs = document.querySelectorAll(".resource-tab");
       const resourcePanels = document.querySelectorAll(".resource-panel");
@@ -1044,22 +1164,18 @@
           const target = tab.dataset.resourceTab;
 
           resourceTabs.forEach((item) => {
-            item.classList.remove("active");
+            const isActive = item === tab;
+
+            item.classList.toggle("active", isActive);
+            item.setAttribute("aria-selected", String(isActive));
           });
 
           resourcePanels.forEach((panel) => {
-            panel.classList.remove("active");
+            const isActive = panel.dataset.resourcePanel === target;
+
+            panel.classList.toggle("active", isActive);
+            panel.hidden = !isActive;
           });
-
-          tab.classList.add("active");
-
-          const activePanel = document.querySelector(
-            `[data-resource-panel="${target}"]`,
-          );
-
-          if (activePanel) {
-            activePanel.classList.add("active");
-          }
         });
       });
     </script>

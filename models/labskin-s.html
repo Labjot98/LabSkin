@@ -85,7 +85,7 @@
 
             <div class="dropdown-menu">
               <a href="./labskin-s.html">Labskin-S</a>
-              <a href="#">Labskin-AD</a>
+              <a href="./labskin-ad.html">Labskin-AD</a>
               <a href="#">Labskin-M</a>
               <a href="#">Labskin-Mel</a>
               <a href="#">Labskin-Wound Healing</a>
@@ -148,7 +148,11 @@
            MODEL HERO
       ========================================== -->
 
-      <section class="model-hero" id="labskin-s">
+      <section
+        class="model-hero"
+        id="labskin-s"
+        style="--model-hero-image: url(../assets/LabSkin-S\ hero\ image.jpg)"
+      >
         <div class="model-hero-overlay"></div>
 
         <div class="model-hero-content">
@@ -437,7 +441,7 @@
       </section>
 
       <!-- =========================================
-           SCIENTIFIC COMPARISON
+             SCIENTIFIC COMPARISON
       ========================================== -->
 
       <section class="model-science-section">
@@ -459,11 +463,75 @@
             </p>
           </div>
 
-          <div class="model-science-image">
-            <img
-              src="../assets/Comparison human skin and model s.png"
-              alt="Comparison of protein expression in human skin and Labskin-S"
-            />
+          <div class="model-science-carousel">
+            <div class="model-science-viewport">
+              <div class="model-science-slide active">
+                <img
+                  src="../assets/LabSkin-S comparison 1.png"
+                  alt="Comparison of protein expression in human skin and Labskin-S"
+                />
+              </div>
+
+              <div class="model-science-slide">
+                <img
+                  src="../assets/LabSkin-S comparison 2.png"
+                  alt="Human skin compared with Labskin-S H&E staining"
+                />
+              </div>
+
+              <div class="model-science-slide">
+                <img
+                  src="../assets/LabSkin-S comparison 3.png"
+                  alt="Human skin compared with Labskin-S immunofluorescence staining"
+                />
+              </div>
+
+              <div class="model-science-slide">
+                <img
+                  src="../assets/LabSkin-S comparison 4.png"
+                  alt="Labskin FFPE cross-section stained by H&E"
+                />
+              </div>
+
+              <button
+                class="model-science-arrow model-science-prev"
+                type="button"
+                aria-label="Previous comparison image"
+              >
+                &#8592;
+              </button>
+
+              <button
+                class="model-science-arrow model-science-next"
+                type="button"
+                aria-label="Next comparison image"
+              >
+                &#8594;
+              </button>
+            </div>
+
+            <div class="model-science-pagination">
+              <button
+                class="active"
+                type="button"
+                aria-label="View comparison image 1"
+              ></button>
+
+              <button
+                type="button"
+                aria-label="View comparison image 2"
+              ></button>
+
+              <button
+                type="button"
+                aria-label="View comparison image 3"
+              ></button>
+
+              <button
+                type="button"
+                aria-label="View comparison image 4"
+              ></button>
+            </div>
           </div>
         </div>
       </section>
@@ -1156,6 +1224,47 @@
     ========================================== -->
 
     <script>
+      /* ==================================================
+    SCIENTIFIC COMPARISON CAROUSEL
+    ================================================== */
+
+      const scienceCarousel = document.querySelector(".model-science-carousel");
+
+      if (scienceCarousel) {
+        const slides = scienceCarousel.querySelectorAll(".model-science-slide");
+        const dots = scienceCarousel.querySelectorAll(
+          ".model-science-pagination button",
+        );
+
+        const prevButton = scienceCarousel.querySelector(".model-science-prev");
+        const nextButton = scienceCarousel.querySelector(".model-science-next");
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          slides[currentSlide].classList.remove("active");
+          dots[currentSlide].classList.remove("active");
+
+          currentSlide = (index + slides.length) % slides.length;
+
+          slides[currentSlide].classList.add("active");
+          dots[currentSlide].classList.add("active");
+        }
+
+        nextButton.addEventListener("click", () => {
+          showSlide(currentSlide + 1);
+        });
+
+        prevButton.addEventListener("click", () => {
+          showSlide(currentSlide - 1);
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            showSlide(index);
+          });
+        });
+      }
       const resourceTabs = document.querySelectorAll(".resource-tab");
       const resourcePanels = document.querySelectorAll(".resource-panel");
 

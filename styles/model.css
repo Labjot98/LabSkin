@@ -1322,6 +1322,124 @@
   }
 }
 /* ==================================================
+   WOUNDED LABSKIN-S SCIENTIFIC CAROUSEL
+================================================== */
+
+.wound-science-carousel {
+  width: min(100%, 820px);
+  margin-inline: auto;
+}
+
+.wound-science-carousel .model-science-viewport {
+  width: 100%;
+  height: 530px;
+  aspect-ratio: auto;
+
+  background: #ffffff;
+}
+
+.wound-science-carousel .model-science-slide {
+  padding: 0;
+}
+
+.wound-science-figure {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE */
+.wound-science-figure img {
+  width: auto;
+  max-width: 100%;
+
+  height: 420px;
+  max-height: 420px;
+
+  flex: none;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #ffffff;
+}
+
+/* CAPTION */
+.wound-science-caption {
+  width: 100%;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid rgba(6, 44, 77, 0.1);
+
+  background: #ffffff;
+}
+
+.wound-science-caption p {
+  max-width: 740px;
+  margin: 0 auto;
+
+  color: var(--text);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.wound-science-caption strong {
+  color: #062c4d;
+  font-weight: 800;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .wound-science-carousel {
+    width: min(100%, 650px);
+  }
+
+  .wound-science-carousel .model-science-viewport {
+    height: 470px;
+  }
+
+  .wound-science-figure img {
+    height: 360px;
+    max-height: 360px;
+  }
+
+  .wound-science-caption {
+    padding: 14px 16px;
+  }
+
+  .wound-science-caption p {
+    font-size: 11px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .wound-science-carousel .model-science-viewport {
+    height: 390px;
+  }
+
+  .wound-science-figure img {
+    height: 285px;
+    max-height: 285px;
+  }
+
+  .wound-science-caption {
+    padding: 12px 14px;
+  }
+
+  .wound-science-caption p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+/* ==================================================
    PLATE SUPPLY
 ================================================== */
 
@@ -2165,5 +2283,155 @@
 
   .model-contact-banner-content p {
     font-size: 16px;
+  }
+}
+/* ==================================================
+   MODEL VIDEO
+================================================== */
+
+.model-video-section {
+  padding: 72px 0;
+  background: #062c4d;
+}
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.model-video-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.model-video-heading .model-section-label {
+  margin-bottom: 16px;
+}
+
+.model-video-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 4.8vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.model-video-heading h2 span {
+  display: block;
+  color: #5dd6ce;
+}
+
+.model-video-heading p {
+  max-width: 640px;
+  margin-top: 20px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   VIDEO CARD
+================================================== */
+
+.model-video-card {
+  width: min(100%, 900px);
+  margin-inline: auto;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.18),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ==================================================
+   VIDEO
+================================================== */
+
+.model-video-wrapper {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: #000000;
+}
+
+.model-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 768px) {
+  .model-video-section {
+    padding: 56px 0;
+  }
+
+  .model-video-heading {
+    margin-bottom: 32px;
+  }
+
+  .model-video-heading h2 {
+    font-size: clamp(36px, 9vw, 50px);
+  }
+
+  .model-video-heading p {
+    font-size: 14px;
+  }
+
+  .model-video-card {
+    width: min(100%, 700px);
+
+    padding: 16px;
+
+    border-radius: 18px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+  .model-video-section {
+    padding: 48px 0;
+  }
+
+  .model-video-heading h2 {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+  .model-video-heading p {
+    font-size: 13px;
+  }
+
+  .model-video-card {
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 15px;
   }
 }

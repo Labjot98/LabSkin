@@ -714,6 +714,44 @@
           </div>
         </div>
       </section>
+      <!-- =========================
+     MICROBIOME FRIENDLY CERTIFICATION
+========================= -->
+
+      <section class="about-certification">
+        <div class="about-certification-overlay"></div>
+
+        <div class="about-certification-content">
+          <!-- Certification Logo -->
+          <img
+            src="./assets/mf-logo.png"
+            alt="Labskin Microbiome Friendly Certification"
+            class="about-certification-logo"
+          />
+
+          <span class="about-certification-label"> Labskin Certification </span>
+
+          <h2>
+            Scientifically proven.
+            <span>Microbiome friendly.</span>
+          </h2>
+
+          <p class="about-certification-intro">
+            Labskin's “Microbiome Friendly” certification validates and confirms
+            to customers that they are buying a product that has been assessed
+            to have no negative impact on their skin microbiome.
+          </p>
+
+          <p class="about-certification-text">
+            We designed the Labskin Microbiome Friendly seal of approval as a
+            powerful marketing tool. The seal is supplied free of charge for any
+            product that has successfully passed our rigorous and validated
+            testing.
+          </p>
+
+          <a href="#" class="about-certification-btn"> Find Out More </a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -802,49 +840,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const teamCards = document.querySelectorAll(".team-card");
-
-      teamCards.forEach((card) => {
-        const toggle = card.querySelector(".team-card-toggle");
-
-        toggle.addEventListener("click", (event) => {
-          event.stopPropagation();
-
-          const isActive = card.classList.contains("active");
-
-          teamCards.forEach((item) => {
-            item.classList.remove("active");
-          });
-
-          if (!isActive) {
-            card.classList.add("active");
-          }
-        });
-
-        card.addEventListener("click", () => {
-          if (window.matchMedia("(hover: none)").matches) {
-            const isActive = card.classList.contains("active");
-
-            teamCards.forEach((item) => {
-              item.classList.remove("active");
-            });
-
-            if (!isActive) {
-              card.classList.add("active");
-            }
-          }
-        });
-      });
-
-      document.addEventListener("click", (event) => {
-        if (!event.target.closest(".team-card")) {
-          teamCards.forEach((card) => {
-            card.classList.remove("active");
-          });
-        }
-      });
-    </script>
   </body>
 </html>

@@ -830,3 +830,316 @@
     line-height: 1.6;
   }
 }
+/* ==================================================
+   MICROBIOME FRIENDLY CERTIFICATION
+================================================== */
+
+.about-certification {
+  position: relative;
+
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 70px;
+  padding: 55px 40px;
+
+  background-image: url("../assets/Innovation.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ==================================================
+   DARK OVERLAY
+================================================== */
+
+.about-certification-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(1, 10, 14, 0.48) 0%,
+    rgba(1, 10, 14, 0.64) 45%,
+    rgba(1, 10, 14, 0.8) 100%
+  );
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.about-certification-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* ==================================================
+   CERTIFICATION LOGO
+================================================== */
+
+.about-certification-logo {
+  width: 145px;
+  height: 145px;
+
+  margin-bottom: 18px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* ==================================================
+   LABEL
+================================================== */
+
+.about-certification-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #71ddd6;
+
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.about-certification-content h2 {
+  max-width: 900px;
+
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(44px, 4.5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+
+.about-certification-content h2 span {
+  display: block;
+  color: #16c1b7;
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.about-certification-intro {
+  max-width: 900px;
+
+  margin: 0 auto 12px;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.about-certification-text {
+  max-width: 920px;
+
+  margin: 0 auto 28px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.about-certification-btn {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 0 28px;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-certification-btn i {
+  font-size: 13px;
+
+  transition: transform 0.3s ease;
+}
+
+.about-certification-btn:hover {
+  transform: translateY(-3px);
+}
+
+.about-certification-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* ==================================================
+   RESPONSIVE — TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-certification {
+    min-height: 580px;
+
+    margin-top: 60px;
+    padding: 55px 30px;
+
+    background-position: center;
+  }
+
+  .about-certification-logo {
+    width: 130px;
+    height: 130px;
+
+    margin-bottom: 17px;
+  }
+
+  .about-certification-content h2 {
+    font-size: clamp(42px, 8vw, 58px);
+  }
+
+  .about-certification-intro {
+    font-size: 16px;
+  }
+
+  .about-certification-text {
+    font-size: 15px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-certification {
+    min-height: auto;
+
+    margin-top: 50px;
+    padding: 55px 20px;
+
+    background-position: center;
+  }
+
+  .about-certification-overlay {
+    background: rgba(1, 10, 14, 0.72);
+  }
+
+  .about-certification-logo {
+    width: 115px;
+    height: 115px;
+
+    margin-bottom: 18px;
+  }
+
+  .about-certification-label {
+    margin-bottom: 14px;
+
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+
+  .about-certification-content h2 {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+    line-height: 1.04;
+  }
+
+  .about-certification-intro {
+    margin-bottom: 12px;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .about-certification-text {
+    margin-bottom: 26px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .about-certification-btn {
+    min-height: 52px;
+
+    padding: 0 23px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — SMALL MOBILE
+================================================== */
+
+@media (max-width: 420px) {
+  .about-certification {
+    margin-top: 45px;
+    padding: 50px 18px;
+  }
+
+  .about-certification-logo {
+    width: 105px;
+    height: 105px;
+  }
+
+  .about-certification-content h2 {
+    font-size: 36px;
+  }
+
+  .about-certification-intro,
+  .about-certification-text {
+    font-size: 14px;
+  }
+
+  .about-certification-btn {
+    width: 100%;
+    max-width: 290px;
+  }
+}

@@ -1,10 +1,15 @@
 /* ==================================================
-   INDUSTRY PAGE
+   INDUSTRY PAGE — GLOBAL LAYOUT
 ================================================== */
 
 .industry-page-container {
   width: min(1400px, calc(100% - 80px));
   margin-inline: auto;
+}
+
+.industry-applications-section,
+.industry-models-section {
+  padding: 64px 0;
 }
 
 /* ==================================================
@@ -27,9 +32,7 @@
   overflow: hidden;
 }
 
-/* ==================================================
-   HERO OVERLAY
-================================================== */
+/* HERO OVERLAY */
 
 .industry-hero-overlay {
   position: absolute;
@@ -45,9 +48,7 @@
   );
 }
 
-/* ==================================================
-   HERO CONTENT
-================================================== */
+/* HERO CONTENT */
 
 .industry-hero-content {
   position: relative;
@@ -62,9 +63,7 @@
   max-width: 760px;
 }
 
-/* ==================================================
-   HERO LABEL
-================================================== */
+/* HERO LABEL */
 
 .industry-hero-label {
   display: inline-block;
@@ -77,9 +76,7 @@
   text-transform: uppercase;
 }
 
-/* ==================================================
-   HERO HEADING
-================================================== */
+/* HERO HEADING */
 
 .industry-hero h1 {
   margin: 0;
@@ -96,12 +93,10 @@
   color: #0bb4aa;
 }
 
-/* ==================================================
-   HERO DESCRIPTION
-================================================== */
+/* HERO DESCRIPTION */
 
 .industry-hero p {
-  margin-top: 28px;
+  margin: 28px 0 0;
 
   color: rgba(255, 255, 255, 0.9);
   font-size: 19px;
@@ -109,9 +104,7 @@
   letter-spacing: -0.02em;
 }
 
-/* ==================================================
-   HERO CTA BUTTONS
-================================================== */
+/* HERO CTA BUTTONS */
 
 .industry-hero-actions {
   display: flex;
@@ -141,7 +134,7 @@
     background 0.25s ease;
 }
 
-/* Primary CTA */
+/* PRIMARY CTA */
 
 .industry-hero-primary-btn {
   background: #062c4d;
@@ -153,11 +146,10 @@
   transform: translateY(-3px);
 }
 
-/* Secondary CTA */
+/* SECONDARY CTA */
 
 .industry-hero-secondary-btn {
   color: #ffffff;
-
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.22);
 
@@ -172,106 +164,29 @@
 }
 
 /* ==================================================
-   RESPONSIVE — TABLET
-================================================== */
-
-@media (max-width: 900px) {
-  .industry-page-container {
-    width: min(1400px, calc(100% - 48px));
-  }
-
-  .industry-hero {
-    height: calc(100vh - 76px);
-    min-height: 600px;
-    padding: 0 24px;
-  }
-
-  .industry-hero h1 {
-    font-size: clamp(44px, 12vw, 68px);
-  }
-
-  .industry-hero p {
-    font-size: 17px;
-  }
-}
-
-/* ==================================================
-   RESPONSIVE — MOBILE
-================================================== */
-
-@media (max-width: 600px) {
-  .industry-page-container {
-    width: min(1400px, calc(100% - 32px));
-  }
-
-  .industry-hero {
-    min-height: 640px;
-    align-items: flex-end;
-
-    padding: 0 20px 64px;
-
-    background-position: center;
-  }
-
-  .industry-hero-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(15, 23, 42, 0.18) 0%,
-      rgba(15, 23, 42, 0.56) 42%,
-      rgba(15, 23, 42, 0.92) 100%
-    );
-  }
-
-  .industry-hero-label {
-    margin-bottom: 18px;
-    font-size: 11px;
-  }
-
-  .industry-hero h1 {
-    font-size: clamp(40px, 13vw, 54px);
-  }
-
-  .industry-hero p {
-    margin-top: 22px;
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  .industry-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 30px;
-  }
-
-  .industry-hero-primary-btn,
-  .industry-hero-secondary-btn {
-    width: 100%;
-  }
-}
-
-/* ==================================================
    KEY APPLICATIONS
 ================================================== */
 
 .industry-applications-section {
-  padding: 72px 0;
   background: #f4f9fd;
 }
 
 .industry-applications-layout {
   display: grid;
-  grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.2fr);
-  gap: 70px;
+  grid-template-columns:
+    minmax(340px, 0.82fr)
+    minmax(0, 1.2fr);
+
+  gap: 48px;
   align-items: stretch;
 }
 
 /* ==================================================
-   APPLICATIONS IMAGE
+   APPLICATIONS IMAGE PANEL
 ================================================== */
 
 .industry-applications-image {
   position: relative;
-
   min-height: 100%;
 
   overflow: hidden;
@@ -288,14 +203,11 @@
   height: 100%;
 
   display: block;
-
   object-fit: cover;
   object-position: center;
 }
 
-/* ==================================================
-   IMAGE OVERLAY
-================================================== */
+/* IMAGE OVERLAY */
 
 .industry-applications-overlay {
   position: absolute;
@@ -310,15 +222,13 @@
   );
 }
 
-/* ==================================================
-   IMAGE INTRO
-================================================== */
+/* IMAGE INTRO */
 
 .industry-applications-intro {
   position: absolute;
-  left: 42px;
-  right: 42px;
-  bottom: 42px;
+  left: 36px;
+  right: 36px;
+  bottom: 36px;
   z-index: 2;
 
   max-width: 480px;
@@ -362,26 +272,22 @@
 }
 
 /* ==================================================
-   APPLICATION LIST
+   APPLICATIONS LIST
 ================================================== */
 
 .industry-applications-list {
   border-top: 1px solid rgba(15, 23, 42, 0.11);
 }
 
-/* ==================================================
-   APPLICATION ROW
-================================================== */
-
 .industry-application-row {
   position: relative;
 
-  min-height: 105px;
-  padding: 18px 18px 18px 0;
+  min-height: 88px;
+  padding: 14px 16px 14px 0;
 
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 20px;
   align-items: center;
 
   border-bottom: 1px solid rgba(15, 23, 42, 0.11);
@@ -391,20 +297,17 @@
     padding 0.3s ease;
 }
 
-/* ==================================================
-   APPLICATION NUMBER
-================================================== */
+/* APPLICATION NUMBER */
 
 .industry-application-row .industry-application-number {
   position: relative;
-
-  padding-right: 20px;
+  padding-right: 18px;
 
   display: flex;
   align-items: center;
 
   color: rgba(6, 44, 77, 0.17);
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.06em;
@@ -420,22 +323,19 @@
   right: 0;
 
   width: 1px;
-  height: 42px;
+  height: 38px;
 
   background: rgba(15, 23, 42, 0.13);
-
   transform: translateY(-50%);
 }
 
-/* ==================================================
-   APPLICATION CONTENT
-================================================== */
+/* APPLICATION CONTENT */
 
 .industry-application-content h3 {
   margin: 0 0 5px;
 
   color: #062c4d;
-  font-size: clamp(21px, 1.7vw, 25px);
+  font-size: clamp(20px, 1.6vw, 24px);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.04em;
@@ -447,16 +347,14 @@
   margin: 0;
 
   color: #536477;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.55;
 }
 
-/* ==================================================
-   HOVER EFFECT
-================================================== */
+/* HOVER EFFECT */
 
 .industry-application-row:hover {
-  padding-left: 18px;
+  padding-left: 16px;
   background: rgba(11, 180, 170, 0.07);
 }
 
@@ -466,178 +364,23 @@
 }
 
 /* ==================================================
-   RESPONSIVE — TABLET
-================================================== */
-
-@media (max-width: 1100px) {
-  .industry-applications-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .industry-applications-image {
-    min-height: 470px;
-  }
-
-  .industry-applications-intro {
-    left: 36px;
-    right: 36px;
-    bottom: 36px;
-  }
-
-  .industry-applications-intro h2 {
-    max-width: 620px;
-  }
-
-  .industry-applications-intro p {
-    max-width: 520px;
-  }
-}
-
-/* ==================================================
-   RESPONSIVE — SMALL TABLET
-================================================== */
-
-@media (max-width: 768px) {
-  .industry-applications-section {
-    padding: 56px 0;
-  }
-
-  .industry-applications-layout {
-    gap: 32px;
-  }
-
-  .industry-applications-image {
-    min-height: 390px;
-    border-radius: 18px;
-  }
-
-  .industry-applications-intro {
-    left: 26px;
-    right: 26px;
-    bottom: 26px;
-  }
-
-  .industry-applications-intro h2 {
-    margin-top: 10px;
-    font-size: clamp(38px, 10vw, 52px);
-  }
-
-  .industry-applications-intro p {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-
-  .industry-application-row {
-    min-height: 96px;
-    padding: 16px 0;
-
-    grid-template-columns: 58px minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .industry-application-row:hover {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .industry-application-row .industry-application-number {
-    padding-right: 14px;
-    font-size: 31px;
-  }
-
-  .industry-application-row .industry-application-number::after {
-    height: 38px;
-  }
-
-  .industry-application-content h3 {
-    font-size: 20px;
-  }
-
-  .industry-application-content p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-}
-
-/* ==================================================
-   RESPONSIVE — MOBILE
-================================================== */
-
-@media (max-width: 480px) {
-  .industry-applications-section {
-    padding: 48px 0;
-  }
-
-  .industry-applications-image {
-    min-height: 350px;
-    border-radius: 16px;
-  }
-
-  .industry-applications-intro {
-    left: 22px;
-    right: 22px;
-    bottom: 22px;
-  }
-
-  .industry-applications-intro h2 {
-    font-size: clamp(34px, 11vw, 44px);
-    letter-spacing: -0.055em;
-  }
-
-  .industry-applications-intro p {
-    max-width: 320px;
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .industry-application-row {
-    grid-template-columns: 1fr;
-    gap: 9px;
-    padding: 17px 0;
-  }
-
-  .industry-application-row .industry-application-number {
-    padding-right: 0;
-    font-size: 26px;
-  }
-
-  .industry-application-row .industry-application-number::after {
-    display: none;
-  }
-
-  .industry-application-row:hover {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .industry-application-content h3 {
-    font-size: 19px;
-  }
-}
-
-/* ==================================================
-   INDUSTRY — RELEVANT MODELS
+   RELEVANT LABSKIN MODELS
 ================================================== */
 
 .industry-models-section {
-  padding: 72px 0;
   background: #ffffff;
 }
 
-/* ==================================================
-   SECTION HEADING
-================================================== */
+/* SECTION HEADING */
 
 .industry-models-heading {
   max-width: 850px;
-  margin: 0 auto 32px;
+  margin: 0 auto 36px;
   text-align: center;
 }
 
 .industry-models-heading .industry-section-label {
-  display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .industry-models-heading h2 {
@@ -657,11 +400,11 @@
 
 .industry-models-heading p {
   max-width: 620px;
-  margin: 22px auto 0;
+  margin: 18px auto 0;
 
   color: #536477;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 /* ==================================================
@@ -674,9 +417,7 @@
   gap: 24px;
 }
 
-/* ==================================================
-   MODEL CARD
-================================================== */
+/* MODEL CARD */
 
 .industry-model-card {
   display: flex;
@@ -699,34 +440,21 @@
   box-shadow: 0 20px 45px rgba(6, 44, 77, 0.07);
 }
 
-/* ==================================================
-   MODEL CONTENT
-================================================== */
+/* MODEL CONTENT */
 
 .industry-model-content {
   flex: 1;
-  min-height: 300px;
+  min-height: 0;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 38px 34px;
-}
-
-.industry-model-category {
-  display: inline-block;
-  margin-bottom: 28px;
-
-  color: #0bb4aa;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  padding: 32px;
 }
 
 .industry-model-content h3 {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 
   color: #062c4d;
   font-size: clamp(30px, 3vw, 42px);
@@ -736,16 +464,14 @@
 }
 
 .industry-model-content p {
-  margin: 0 0 32px;
+  margin: 0 0 26px;
 
   color: #536477;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-/* ==================================================
-   MODEL LINK
-================================================== */
+/* MODEL LINK */
 
 .industry-model-link {
   margin-top: auto;
@@ -775,16 +501,107 @@
 }
 
 /* ==================================================
+   RESPONSIVE — LARGE TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+  .industry-applications-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .industry-applications-image {
+    min-height: 420px;
+  }
+}
+
+/* ==================================================
    RESPONSIVE — TABLET
 ================================================== */
 
 @media (max-width: 1000px) {
+  .industry-applications-section,
   .industry-models-section {
-    padding: 70px 0;
+    padding: 56px 0;
   }
 
   .industry-models-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .industry-page-container {
+    width: min(1400px, calc(100% - 48px));
+  }
+
+  .industry-hero {
+    height: calc(100vh - 76px);
+    min-height: 600px;
+    padding: 0 24px;
+  }
+
+  .industry-hero h1 {
+    font-size: clamp(44px, 12vw, 68px);
+  }
+
+  .industry-hero p {
+    font-size: 17px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — SMALL TABLET
+================================================== */
+
+@media (max-width: 768px) {
+  .industry-applications-image {
+    min-height: 390px;
+    border-radius: 18px;
+  }
+
+  .industry-applications-intro {
+    left: 26px;
+    right: 26px;
+    bottom: 26px;
+  }
+
+  .industry-applications-intro h2 {
+    font-size: clamp(38px, 10vw, 52px);
+  }
+
+  .industry-applications-intro p {
+    font-size: 14px;
+  }
+
+  .industry-application-row {
+    min-height: 88px;
+    padding: 14px 0;
+
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .industry-application-row .industry-application-number {
+    padding-right: 14px;
+    font-size: 30px;
+  }
+
+  .industry-application-row .industry-application-number::after {
+    height: 38px;
+  }
+
+  .industry-application-content h3 {
+    font-size: 20px;
+  }
+
+  .industry-application-content p {
+    font-size: 13px;
+  }
+
+  .industry-application-row:hover {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
@@ -793,12 +610,67 @@
 ================================================== */
 
 @media (max-width: 600px) {
-  .industry-models-section {
-    padding: 52px 0;
+  .industry-page-container {
+    width: min(1400px, calc(100% - 32px));
   }
 
+  /* HERO */
+
+  .industry-hero {
+    height: auto;
+    min-height: 640px;
+    align-items: flex-end;
+
+    padding: 100px 20px 64px;
+    background-position: center;
+  }
+
+  .industry-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.18) 0%,
+      rgba(15, 23, 42, 0.56) 42%,
+      rgba(15, 23, 42, 0.92) 100%
+    );
+  }
+
+  .industry-hero-label {
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+
+  .industry-hero h1 {
+    font-size: clamp(40px, 13vw, 54px);
+  }
+
+  .industry-hero p {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .industry-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 30px;
+  }
+
+  .industry-hero-primary-btn,
+  .industry-hero-secondary-btn {
+    width: 100%;
+  }
+
+  /* SHARED SECTION SPACING */
+
+  .industry-applications-section,
+  .industry-models-section {
+    padding: 48px 0;
+  }
+
+  /* MODELS */
+
   .industry-models-heading {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .industry-models-heading h2 {
@@ -815,19 +687,81 @@
   }
 
   .industry-model-content {
-    min-height: 270px;
-    padding: 30px 26px;
-  }
-
-  .industry-model-category {
-    margin-bottom: 22px;
+    padding: 26px 24px;
   }
 
   .industry-model-content h3 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .industry-model-content p {
     font-size: 14px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+  .industry-applications-image {
+    min-height: 350px;
+    border-radius: 16px;
+  }
+
+  .industry-applications-intro {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .industry-applications-intro h2 {
+    font-size: clamp(34px, 11vw, 44px);
+    letter-spacing: -0.055em;
+  }
+
+  .industry-applications-intro p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .industry-application-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .industry-application-row .industry-application-number {
+    padding-right: 0;
+    font-size: 25px;
+  }
+
+  .industry-application-row .industry-application-number::after {
+    display: none;
+  }
+
+  .industry-application-content h3 {
+    font-size: 19px;
+  }
+
+  .industry-application-row:hover {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* ==================================================
+   ACCESSIBILITY
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-hero-primary-btn,
+  .industry-hero-secondary-btn,
+  .industry-application-row,
+  .industry-application-number,
+  .industry-application-content h3,
+  .industry-model-card,
+  .industry-model-link {
+    transition: none;
   }
 }
